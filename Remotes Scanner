@@ -17,7 +17,7 @@ local REC = coroutine.create(function()
     for _, v in pairs(game:GetDescendants()) do
         if v:IsA("RemoteEvent") then
             if v.Parent.Name ~= "DefaultChatSystemChatEvents" or v.Parent.Name ~= "RobloxReplicatedStorage" or v.Name ~= "CharacterSoundEvent" then
-                RemoteEventsCount = RemoteEventsCount + 1
+                RemoteEventsCount += 1
             end
         end
     end
@@ -27,7 +27,7 @@ local RFC = coroutine.create(function()
     for _, v in pairs(game:GetDescendants()) do
         if v:IsA("RemoteFunction") then
             if v.Parent.Name ~= "DefaultChatSystemChatEvents" or v.Parent.Name ~= "RobloxReplicatedStorage" or v.Name ~= "CharacterSoundEvent" then
-                RemoteFunctionsCount = RemoteFunctionsCount + 1
+                RemoteFunctionsCount += 1
             end
         end
     end
@@ -50,7 +50,7 @@ local Scan = coroutine.create(function()
                 if v.Parent.Name ~= "RobloxReplicatedStorage" then
                     if v.Parent.Name ~= "DefaultSoundEvents" then
                         if v.Name ~= "CharacterSoundEvent" then
-                            print("\n\n        [ "..v.ClassName.." found ] :\n           {\n             Name     :   "..v.Name..",\n             Parent   :   "..v.Parent.Name..",\n             Ancestor :   "..v.Parent:FindFirstAncestor(v.Parent.Parent.Name).Name..",\n             Type     :   "..tostring(v.ClassName):sub(7, tonumber(string.len(v.ClassName))).."\n           };\n")
+                            print("\n\n        [ "..v.ClassName.." ] :\n           {\n             Name     :   "..v.Name..",\n             Parent   :   "..v.Parent.Name..",\n             Ancestor :   "..v.Parent:FindFirstAncestor(v.Parent.Parent.Name).Name..",\n             Path     :   "..v:GetFullName()..",\n             Type     :   "..tostring(v.ClassName):sub(7, tonumber(string.len(v.ClassName))).."\n           };\n")
                         end
                     end
                 end
