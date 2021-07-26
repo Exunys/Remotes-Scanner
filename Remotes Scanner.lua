@@ -1,20 +1,9 @@
---[[
-
-		██╗░░░██╗██████╗░██╗░█████╗░░█████╗░░██████╗████████╗
-		██║░░░██║██╔══██╗██║██╔══██╗██╔══██╗██╔════╝╚══██╔══╝
-		██║░░░██║██████╦╝██║██║░░╚═╝███████║╚█████╗░░░░██║░░░
-		██║░░░██║██╔══██╗██║██║░░██╗██╔══██║░╚═══██╗░░░██║░░░
-		╚██████╔╝██████╦╝██║╚█████╔╝██║░░██║██████╔╝░░░██║░░░
-		░╚═════╝░╚═════╝░╚═╝░╚════╝░╚═╝░░╚═╝╚═════╝░░░░╚═╝░░░
-
-]]
-
 local RemoteEventsCount = 0
 local RemoteFunctionsCount = 0
 local TimeElapsed = 0
 
 local REC = coroutine.create(function()
-    for _, v in pairs(game:GetDescendants()) do
+    for _, v in next, game:GetDescendants() do
         if v:IsA("RemoteEvent") then
             if v.Parent.Name ~= "DefaultChatSystemChatEvents" or v.Parent.Name ~= "RobloxReplicatedStorage" or v.Name ~= "CharacterSoundEvent" then
                 RemoteEventsCount += 1
@@ -24,7 +13,7 @@ local REC = coroutine.create(function()
 end)
 
 local RFC = coroutine.create(function()
-    for _, v in pairs(game:GetDescendants()) do
+    for _, v in next, game:GetDescendants() do
         if v:IsA("RemoteFunction") then
             if v.Parent.Name ~= "DefaultChatSystemChatEvents" or v.Parent.Name ~= "RobloxReplicatedStorage" or v.Name ~= "CharacterSoundEvent" then
                 RemoteFunctionsCount += 1
@@ -44,7 +33,7 @@ print()
 warn("Remotes scan has started.")
 
 local Scan = coroutine.create(function()
-    for _, v in pairs(game:GetDescendants()) do
+    for _, v in next, game:GetDescendants() do
         if v:IsA("RemoteEvent") or v:IsA("RemoteFunction") then
             if v.Parent.Name ~= "DefaultChatSystemChatEvents" then
                 if v.Parent.Name ~= "RobloxReplicatedStorage" then
