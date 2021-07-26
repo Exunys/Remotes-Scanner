@@ -19,12 +19,12 @@ These are the details that the script would print :
 
 ### Script
 
-Load the script by using the code below or by copying it from [here](https://github.com/UbicastDev/Remotes-Scanner/blob/main/Remotes%20Scanner).
+Load the script by using the code below or by copying it from [here](https://github.com/Exunys/Remotes-Scanner/blob/main/Remotes%20Scanner.lua).
 ```lua
 loadstring(game:HttpGet("https://pastebin.com/raw/5NpHyzmV"))()
 ```
 
 ## Contact information
 
-- Discord : [Aleksandar](https://discord.com/users/611111398818316309)
-- ROBLOX : [Ubicast](https://www.roblox.com/users/330279990/profile)
+- Discord : [Exunys](https://discord.com/users/611111398818316309)
+- ROBLOX : [Exunys](https://www.roblox.com/users/330279990/profile)
