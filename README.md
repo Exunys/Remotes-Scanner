@@ -1,4 +1,4 @@
-# Remotes Scanner
+# Remotes Scanner [![Visitors](https://visitor-badge.laobi.icu/badge?page_id=Exunys.Remotes-Scanner&right_color=grey)](https://github.com/Exunys/Remotes-Scanner)
 
 ### About
 
@@ -21,10 +21,10 @@ These are the details that the script would print :
 
 Load the script by using the code below or by copying it from [here](https://github.com/Exunys/Remotes-Scanner/blob/main/Remotes%20Scanner.lua).
 ```lua
-loadstring(game:HttpGet("https://pastebin.com/raw/5NpHyzmV"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/Remotes-Scanner/refs/heads/main/Remotes%20Scanner.lua"))()
 ```
 
 ## Contact information
 
-- Discord : [Exunys](https://discord.com/users/611111398818316309)
-- ROBLOX : [Exunys](https://www.roblox.com/users/330279990/profile)
+* [Discord](https://discord.com/users/611111398818316309)
+* [Email](mailto:exunys@gmail.com)
